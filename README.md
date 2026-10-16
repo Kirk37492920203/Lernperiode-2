@@ -6,7 +6,9 @@ Wo stehen Sie mit Ihren Noten? In welchen Modulen waren Sie besonders stark; in 
 Was wäre ein geeignetes Projekt für diese LP1?
 # 16.10.2026
 AP 1
-Einen Numberguesser programmiert
+
+1. Einen Numberguesser programmiert
+2. Eine neue Lernperiode in Github erstellt und Projekt Ideen gesammelt
 
 ✍️ Heute habe ich ein number guesser in Visual Studio programmiert. Dazu habe ich noch eine neue Lernperiode erstellt.
 Als Hausaufgabe will ich meinen Numberguesser weiter programmieren, sodass der user entscheiden kann von wo bis wo er guessen will Z.B. 1-10 oder 1-100.
