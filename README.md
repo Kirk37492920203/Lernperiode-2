@@ -1,12 +1,17 @@
 
 # Lern-Periode 2
-Grob-Planung
+# Grob-Planung
+
 Wo stehen Sie mit Ihren Noten? In welchen Modulen waren Sie besonders stark; in welchen sind die ungenügend? Welche davon sind besonders wichtig?
 Was wäre ein geeignetes Projekt für diese LP1?
-16.10.2026
- AP 1
- ...
- ...
-✍️ Heute habe ich... (50-100 Wörter)
+# 16.10.2026
+AP 1
+Einen Numberguesser programmiert
 
-23.10.2026
+✍️ Heute habe ich ein number guesser in Visual Studio programmiert. Dazu habe ich noch eine neue Lernperiode erstellt.
+Als Hausaufgabe will ich meinen Numberguesser weiter programmieren, sodass der user entscheiden kann von wo bis wo er guessen will Z.B. 1-10 oder 1-100.
+(50-100 Wörter)
+
+# 23.10.2026 HA
+Numberguesser weiterprogrammieren, sodass der user entscheiden kann von wo bis wo er raten will Z.B. 1-10 oder 1-100.
+ 
