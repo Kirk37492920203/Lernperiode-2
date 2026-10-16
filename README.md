@@ -16,4 +16,7 @@ Als Hausaufgabe will ich meinen Numberguesser weiter programmieren, sodass der u
 
 # 23.10.2026 HA
 Numberguesser weiterprogrammieren, sodass der user entscheiden kann von wo bis wo er raten will Z.B. 1-10 oder 1-100.
+
+# 23.10.2026 Unterricht
+Französisches Voci Trainer programmieren
  
