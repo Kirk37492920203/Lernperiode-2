@@ -19,7 +19,7 @@ Numberguesser weiterprogrammieren, sodass der user entscheiden kann von wo bis w
 
 # 23.10.2026 Unterricht
 Französisches Voci Trainer programmieren
-Arrays besser nutzen
-Schleifen besser nutzen
+Arrays und Schleifen besser nutzen können
+Projekt 319 weitermachen
 Französisch Voci 25 Wörter lang machen mit Punkte
  
