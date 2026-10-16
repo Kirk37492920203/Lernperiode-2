@@ -19,4 +19,5 @@ Numberguesser weiterprogrammieren, sodass der user entscheiden kann von wo bis w
 
 # 23.10.2026 Unterricht
 Französisches Voci Trainer programmieren
+Arrays und Schleifen besser nutzen im Projekt
  
