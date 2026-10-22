@@ -1,8 +1,15 @@
-﻿Random r = new Random();
-int zahl = r.Next(1, 101);
+Random r = new Random();
+
+Console.Write("Von welcher Zahl soll geraten werden? ");
+int min = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Bis zu welcher Zahl soll geraten werden? ");
+int max = Convert.ToInt32(Console.ReadLine());
+
+int zahl = r.Next(min, max + 1);
 int tipp = 0;
 
-Console.WriteLine("Rate eine Zahl von 1 bis 100.");
+Console.WriteLine("Rate eine Zahl von " + min + " bis " + max + ".");
 
 while (tipp != zahl)
 {
