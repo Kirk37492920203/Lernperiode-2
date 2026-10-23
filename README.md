@@ -22,4 +22,8 @@ Französisches Voci Trainer programmieren
 Arrays und Schleifen besser nutzen können
 Projekt 319 weitermachen
 Französisch Voci 25 Wörter lang machen mit Punkte
+
+# Französisch Voci-Trainer
+
+Im Unterricht habe ich einen Französisch-Voci-Trainer in C# programmiert, der 25 Wörter abfragt und für jede richtige Antwort einen Punkt gibt. Dabei habe ich gelernt, Arrays und Schleifen sinnvoll einzusetzen.
  
