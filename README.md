@@ -25,5 +25,11 @@ Französisch Voci 25 Wörter lang machen mit Punkte
 
 # Französisch Voci-Trainer
 
-Im Unterricht habe ich einen Französisch-Voci-Trainer in C# programmiert, der 25 Wörter abfragt und für jede richtige Antwort einen Punkt gibt. Dabei habe ich gelernt, Arrays und Schleifen sinnvoll einzusetzen.
- 
+Im Unterricht habe ich angefangen, einen Französisch-Voci-Trainer in C# zu programmieren, der 25 Wörter abfragt und für jede richtige Antwort einen Punkt gibt. Dabei habe ich gelernt, Arrays und Schleifen einzusetzen. Im Unterricht bin ich nicht ganz fertig geworden, deshalb mache ich den Rest als Hausaufgabe fertig.
+
+# 23.10.2026 Unterricht
+Modul 319 projekt weiter programmieren
+Scope besser nutzen können
+Ein kleines Quiz über C- Sharp programmieren
+Ein Mathe berechner Programm wo der benutzer entscheidet welche operationen er wählen möchte
+  
