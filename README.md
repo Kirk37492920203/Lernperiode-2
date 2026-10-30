@@ -32,4 +32,11 @@ Modul 319 projekt weiter programmieren
 Scope besser nutzen können
 Ein kleines Quiz über C- Sharp programmieren
 Ein Mathe berechner Programm wo der benutzer entscheidet welche operationen er wählen möchte
-  
+
+# 30.10.2026 Unterricht
+Ich habe im Unterricht meinen Mathe berechner programmiert, Modul 319 Projekt weitergemacht und habe Scope mir noch besser angeschaut.
+
+# 6.11.2026
+Modul 319 weiterprogrammieren
+Kleines Quiz über C sharp programmieren
+
