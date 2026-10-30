@@ -1,72 +1,81 @@
 ﻿using System;
 
-namespace FranzVociTrainer
+class Program
 {
-    internal class Program
+    static double Addiere(double a, double b)
     {
-        static void Main(string[] args)
+        return a + b;
+    }
+
+    static double Subtrahiere(double a, double b)
+    {
+        return a - b;
+    }
+
+    static double Multipliziere(double a, double b)
+    {
+        return a * b;
+    }
+
+    static double Dividiere(double a, double b)
+    {
+        return a / b;
+    }
+
+    static void Main()
+    {
+        string nochmal;
+
+        do
         {
-            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.WriteLine("===== Mathe-Rechner =====");
+            Console.WriteLine("1 oder + = Plus");
+            Console.WriteLine("2 oder - = Minus");
+            Console.WriteLine("3 oder * = Mal");
+            Console.WriteLine("4 oder / = Geteilt");
+            Console.Write("Welche Rechnung willst du? ");
+            string wahl = Console.ReadLine().Trim();
 
-            string[] deutsch =
+            Console.Write("Erste Zahl: ");
+            double zahl1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Zweite Zahl: ");
+            double zahl2 = Convert.ToDouble(Console.ReadLine());
+
+            if (wahl == "1" || wahl == "+")
             {
-                "Hund", "Katze", "Haus", "Schule", "Buch",
-                "Wasser", "Brot", "Apfel", "Auto", "Freund",
-                "Familie", "Stadt", "Tisch", "Stuhl", "Fenster",
-                "Tür", "Zeit", "Tag", "Nacht", "Sonne",
-                "Mond", "Baum", "Blume", "Meer", "Lehrer"
-            };
-
-            string[] franzoesisch =
+                Console.WriteLine("Ergebnis: " + Addiere(zahl1, zahl2));
+            }
+            else if (wahl == "2" || wahl == "-")
             {
-                "le chien", "le chat", "la maison", "l'ecole", "le livre",
-                "l'eau", "le pain", "la pomme", "la voiture", "l'ami",
-                "la famille", "la ville", "la table", "la chaise", "la fenetre",
-                "la porte", "le temps", "le jour", "la nuit", "le soleil",
-                "la lune", "l'arbre", "la fleur", "la mer", "le professeur"
-            };
-
-            int punkte = 0;
-
-            Console.WriteLine("=== Französisch Voci-Trainer ===");
-            Console.WriteLine("Schreibe das Wort auf Französisch (mit Artikel).");
-            Console.WriteLine();
-
-            for (int i = 0; i < deutsch.Length; i++)
+                Console.WriteLine("Ergebnis: " + Subtrahiere(zahl1, zahl2));
+            }
+            else if (wahl == "3" || wahl == "*")
             {
-                Console.Write((i + 1) + ". " + deutsch[i] + ": ");
-                string eingabe = Console.ReadLine() ?? "";
-
-                if (eingabe.Trim().ToLower() == franzoesisch[i])
+                Console.WriteLine("Ergebnis: " + Multipliziere(zahl1, zahl2));
+            }
+            else if (wahl == "4" || wahl == "/")
+            {
+                if (zahl2 == 0)
                 {
-                    Console.WriteLine("Richtig! +1 Punkt");
-                    punkte++;
+                    Console.WriteLine("Fehler: Durch 0 teilen geht nicht!");
                 }
                 else
                 {
-                    Console.WriteLine("Falsch! Richtig ist: " + franzoesisch[i]);
+                    Console.WriteLine("Ergebnis: " + Dividiere(zahl1, zahl2));
                 }
-            }
-
-            Console.WriteLine();
-            Console.WriteLine("Du hast " + punkte + " von " + deutsch.Length + " Punkten.");
-
-            if (punkte == deutsch.Length)
-            {
-                Console.WriteLine("Perfekt!");
-            }
-            else if (punkte >= 15)
-            {
-                Console.WriteLine("Gut gemacht!");
             }
             else
             {
-                Console.WriteLine("Übe noch ein bisschen.");
+                Console.WriteLine("Ungültige Auswahl! Du hast eingegeben: [" + wahl + "]");
             }
 
+            Console.Write("Nochmal rechnen? (j/n): ");
+            nochmal = Console.ReadLine().Trim();
             Console.WriteLine();
-            Console.WriteLine("Drücke eine Taste zum Beenden...");
-            Console.ReadKey();
-        }
+
+        } while (nochmal == "j");
+
+        Console.WriteLine("Tschüss!");
     }
 }
