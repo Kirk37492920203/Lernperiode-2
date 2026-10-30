@@ -1,81 +1,81 @@
 ﻿using System;
 
-class Program
+Console.WriteLine("Willkommen zum Kalorienrechner!");
+
+Console.WriteLine("Welches Geschlecht hast du? (M/W)");
+string geschlecht = Console.ReadLine().ToUpper();
+
+Console.WriteLine("Wie alt bist du?");
+int alter = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Wie viel wiegst du in kg?");
+double gewicht = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("Wie gross bist du in cm?");
+double grösse = Convert.ToDouble(Console.ReadLine());
+
+double grundumsatz;
+
+if (geschlecht == "M")
 {
-    static double Addiere(double a, double b)
-    {
-        return a + b;
-    }
-
-    static double Subtrahiere(double a, double b)
-    {
-        return a - b;
-    }
-
-    static double Multipliziere(double a, double b)
-    {
-        return a * b;
-    }
-
-    static double Dividiere(double a, double b)
-    {
-        return a / b;
-    }
-
-    static void Main()
-    {
-        string nochmal;
-
-        do
-        {
-            Console.WriteLine("===== Mathe-Rechner =====");
-            Console.WriteLine("1 oder + = Plus");
-            Console.WriteLine("2 oder - = Minus");
-            Console.WriteLine("3 oder * = Mal");
-            Console.WriteLine("4 oder / = Geteilt");
-            Console.Write("Welche Rechnung willst du? ");
-            string wahl = Console.ReadLine().Trim();
-
-            Console.Write("Erste Zahl: ");
-            double zahl1 = Convert.ToDouble(Console.ReadLine());
-
-            Console.Write("Zweite Zahl: ");
-            double zahl2 = Convert.ToDouble(Console.ReadLine());
-
-            if (wahl == "1" || wahl == "+")
-            {
-                Console.WriteLine("Ergebnis: " + Addiere(zahl1, zahl2));
-            }
-            else if (wahl == "2" || wahl == "-")
-            {
-                Console.WriteLine("Ergebnis: " + Subtrahiere(zahl1, zahl2));
-            }
-            else if (wahl == "3" || wahl == "*")
-            {
-                Console.WriteLine("Ergebnis: " + Multipliziere(zahl1, zahl2));
-            }
-            else if (wahl == "4" || wahl == "/")
-            {
-                if (zahl2 == 0)
-                {
-                    Console.WriteLine("Fehler: Durch 0 teilen geht nicht!");
-                }
-                else
-                {
-                    Console.WriteLine("Ergebnis: " + Dividiere(zahl1, zahl2));
-                }
-            }
-            else
-            {
-                Console.WriteLine("Ungültige Auswahl! Du hast eingegeben: [" + wahl + "]");
-            }
-
-            Console.Write("Nochmal rechnen? (j/n): ");
-            nochmal = Console.ReadLine().Trim();
-            Console.WriteLine();
-
-        } while (nochmal == "j");
-
-        Console.WriteLine("Tschüss!");
-    }
+    grundumsatz = 88.362
+        + (13.397 * gewicht)
+        + (4.799 * grösse)
+        - (5.677 * alter);
 }
+else
+{
+    grundumsatz = 447.593
+        + (9.247 * gewicht)
+        + (3.098 * grösse)
+        - (4.330 * alter);
+}
+
+Console.WriteLine("Dein Grundumsatz pro Tag: "
+    + Math.Round(grundumsatz) + " kcal");
+
+Console.WriteLine("Dein Grundumsatz pro Woche: "
+    + Math.Round(grundumsatz * 7) + " kcal");
+
+Console.WriteLine();
+Console.WriteLine("Wie viele Minuten pro Woche machst du Joggen?");
+int joggen = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Wie viele Minuten pro Woche machst du Schwimmen?");
+int schwimmen = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Wie viele Minuten pro Woche machst du Radfahren?");
+int radfahren = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Wie viele Minuten pro Woche machst du Krafttraining?");
+int krafttraining = Convert.ToInt32(Console.ReadLine());
+
+double kalorienJoggen = joggen * 10;
+double kalorienSchwimmen = schwimmen * 10;
+double kalorienRadfahren = radfahren * 8;
+double kalorienKrafttraining = krafttraining * 6;
+
+double sportKalorien = kalorienJoggen
+    + kalorienSchwimmen
+    + kalorienRadfahren
+    + kalorienKrafttraining;
+
+double gesamtWoche = grundumsatz * 7 + sportKalorien;
+double gesamtTag = gesamtWoche / 7;
+
+Console.WriteLine("Geschlecht: " + geschlecht);
+Console.WriteLine("Alter: " + alter + " Jahre");
+Console.WriteLine("Gewicht: " + gewicht + " kg");
+Console.WriteLine("Grösse: " + grösse + " cm");
+
+Console.WriteLine();
+Console.WriteLine("Sportkalorien pro Woche: "
+    + Math.Round(sportKalorien) + " kcal");
+
+Console.WriteLine("Geschätzter Verbrauch pro Tag: "
+    + Math.Round(gesamtTag) + " kcal");
+
+Console.WriteLine("Geschätzter Verbrauch pro Woche: "
+    + Math.Round(gesamtWoche) + " kcal");
+
+Console.ReadKey();
