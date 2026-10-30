@@ -39,4 +39,8 @@ Ich habe im Unterricht meinen Mathe berechner programmiert, Modul 319 Projekt we
 # 6.11.2026
 Modul 319 weiterprogrammieren
 Kleines Quiz über C sharp programmieren
+Matherechner mini prüfung programmieren
+Modul 319 Projekt dokumentieren
+(HA) Englisch Voci Trainer bauen mit mini prüfung
+
 
