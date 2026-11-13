@@ -63,8 +63,8 @@ Ich habe im Unterricht meinen Mathe berechner programmiert, Modul 319 Projekt we
 - [ ] Modul 319 weiterprogrammieren
 - [x] Kleines Quiz über C sharp programmieren
 - [x] Matherechner mini prüfung programmieren
-- [ ] Modul 319 Projekt dokumentieren
 - [ ] (HA) Englisch Voci Trainer bauen mit mini prüfung
+- [ ]  Modul 319 Projekt dokumentieren
 
 Ich habe einen tollen Matherechner programmiert, siehe hier mein toller Code: [siehe hier](https://github.com/Kirk37492920203/Lernperiode-2/blob/main/Matherechner%20x%20Minipr%C3%BCfung.cs)
 
@@ -74,4 +74,10 @@ Ich habe einen tollen Matherechner programmiert, siehe hier mein toller Code: [s
 
 - [ ] Wissen, wie man Files in C sharp reintut
 - [ ] IPERKA Dokument vom Projekt Kalorienrechner
-- [ ]
+- [ ] Farbenkombinator in C sharp programmieren
+
+ Ich habe heute meine IPERKA Doku fertiggestellt, einen Farbenkombinator programmiert wo du 2 Farben angeben kannst wie rot und blau gibt violett. Und ich habe noch geschaut wie man Files in C sharp reintut und wie man C sharp dazu bringt sie zu lesen.
+
+## 📖 Hausaufgaben bis 20.11.2026
+- [ ] Mathe Hilfer programmieren
+- [ ] Code Hilfer programmieren
