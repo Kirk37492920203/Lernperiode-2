@@ -39,8 +39,9 @@ Ich habe im Unterricht meinen Mathe berechner programmiert, Modul 319 Projekt we
 # 6.11.2026
  - [ ] Modul 319 weiterprogrammieren
  - [ ] Kleines Quiz über C sharp programmieren
- - [ ] Matherechner mini prüfung programmieren
+ - [x] Matherechner mini prüfung programmieren
  - [ ] Modul 319 Projekt dokumentieren
  - [ ] (HA) Englisch Voci Trainer bauen mit mini prüfung
 
+Ich habe einen tollen Matherechner programmiert, siehe hier mein toller Code: [siehe hier](https://github.com/Kirk37492920203/Lernperiode-2/blob/main/Matherechner%20x%20Minipr%C3%BCfung.cs)
 
