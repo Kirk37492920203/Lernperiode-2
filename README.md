@@ -72,7 +72,7 @@ Ich habe einen tollen Matherechner programmiert, siehe hier mein toller Code: [s
 
 ## 📅 13.11.2026
 
-- [ ] Wissen, wie man Files in C sharp reintut
+- [ ] Wissen, wie man Files in C sharp hinzufügt
 - [ ] IPERKA Dokument vom Projekt Kalorienrechner
 - [ ] Farbenkombinator in C sharp programmieren
 
