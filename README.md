@@ -37,10 +37,10 @@ Ein Mathe berechner Programm wo der benutzer entscheidet welche operationen er w
 Ich habe im Unterricht meinen Mathe berechner programmiert, Modul 319 Projekt weitergemacht und habe Scope mir noch besser angeschaut.
 
 # 6.11.2026
-Modul 319 weiterprogrammieren
-Kleines Quiz über C sharp programmieren
-Matherechner mini prüfung programmieren
-Modul 319 Projekt dokumentieren
-(HA) Englisch Voci Trainer bauen mit mini prüfung
+ - [ ] Modul 319 weiterprogrammieren
+ - [ ] Kleines Quiz über C sharp programmieren
+ - [ ] Matherechner mini prüfung programmieren
+ - [ ] Modul 319 Projekt dokumentieren
+ - [ ] (HA) Englisch Voci Trainer bauen mit mini prüfung
 
 
