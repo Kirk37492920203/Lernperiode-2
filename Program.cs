@@ -1,0 +1,59 @@
+﻿using System;
+
+namespace CodeHelfer
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            string[] begriffe = { "int", "string", "bool", "if", "for", "while", "array", "ausgabe", "eingabe" };
+
+            string[] erklaerungen =
+            {
+                "int speichert ganze Zahlen.\nBeispiel: int alter = 15;",
+                "string speichert Text.\nBeispiel: string name = \"Leon\";",
+                "bool speichert true oder false.\nBeispiel: bool istFertig = true;",
+                "if prüft eine Bedingung.\nBeispiel: if (alter >= 18) { Console.WriteLine(\"Erwachsen\"); }",
+                "for wiederholt Code eine bestimmte Anzahl Mal.\nBeispiel: for (int i = 0; i < 5; i++) { Console.WriteLine(i); }",
+                "while wiederholt Code, solange etwas wahr ist.\nBeispiel: while (zahl < 10) { zahl++; }",
+                "Ein Array speichert mehrere Werte.\nBeispiel: string[] namen = { \"Anna\", \"Tim\" };",
+                "So gibst du Text aus:\nBeispiel: Console.WriteLine(\"Hallo\");",
+                "So liest du eine Eingabe ein:\nBeispiel: string text = Console.ReadLine();"
+            };
+
+            Console.WriteLine("=== C# Code-Helfer ===");
+            Console.WriteLine("Begriffe: int, string, bool, if, for, while, array, ausgabe, eingabe");
+            Console.WriteLine("Schreibe 'ende' zum Beenden.");
+
+            while (true)
+            {
+                Console.WriteLine();
+                Console.Write("Was willst du wissen? ");
+                string eingabe = Console.ReadLine().Trim().ToLower();
+
+                if (eingabe == "ende")
+                {
+                    break;
+                }
+
+                bool gefunden = false;
+
+                for (int i = 0; i < begriffe.Length; i++)
+                {
+                    if (eingabe == begriffe[i])
+                    {
+                        Console.WriteLine(erklaerungen[i]);
+                        gefunden = true;
+                    }
+                }
+
+                if (gefunden == false)
+                {
+                    Console.WriteLine("Diesen Begriff kenne ich nicht.");
+                }
+            }
+        }
+    }
+}
