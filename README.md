@@ -78,6 +78,12 @@ Ich habe einen tollen Matherechner programmiert, siehe hier mein toller Code: [s
 
  Ich habe heute meine IPERKA Doku fertiggestellt, einen Farbenkombinator programmiert wo du 2 Farben angeben kannst wie rot und blau gibt violett. Und ich habe noch geschaut wie man Files in C sharp reintut und wie man C sharp dazu bringt sie zu lesen.
 
+## 📅 20.11.2026 
+- [ ] Einen Schere - Stein- Papier Game programmieren
+- [ ] Passwort Generator mit einer Sicherheitsprüfung
+- [ ] Casino Slot machine mit Jackpot programmieren
+
+
 ## 📖 Hausaufgaben bis 20.11.2026
 - [ ] Mathe Hilfer programmieren
 - [ ] Code Hilfer programmieren
