@@ -83,7 +83,19 @@ Ich habe einen tollen Matherechner programmiert, siehe hier mein toller Code: [s
 - [ ] Passwort Generator mit einer Sicherheitsprüfung
 - [ ] Casino Slot machine mit Jackpot programmieren
 
+      Heute habe ich mit C# programmiert. Ich habe drei kleine Programme gemacht: Schere-Stein-Papier, einen Passwort-Generator und eine Slot-Machine. Dabei habe ich Schleifen, Zufallszahlen und if-Abfragen benutzt. Es hat Spaß gemacht, war aber manchmal ein bisschen schwierig.
 
-## 📖 Hausaufgaben bis 20.11.2026
+
+## Hausaufgaben
 - [ ] Mathe Hilfer programmieren
 - [ ] Code Hilfer programmieren
+
+ ## 📅 20.11.2026 
+- [ ] Blackjack spiel programmieren
+- [ ] Reaktionstester programmieren
+- [ ] Münzwurfstatistik programmieren
+- [ ] Ein Countdown Timer programmieren
+## Hausaufgaben
+- [ ] Bombe Entschärfen Spiel
+ 
+ 
