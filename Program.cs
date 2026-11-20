@@ -1,0 +1,146 @@
+﻿using System;
+
+class Program
+{
+    static void Main()
+    {
+        bool weiter = true;
+
+        while (weiter)
+        {
+            Console.WriteLine();
+            Console.WriteLine("=== Passwort-Programm ===");
+            Console.WriteLine("1 = Passwort erstellen");
+            Console.WriteLine("2 = Eigenes Passwort pruefen");
+            Console.WriteLine("3 = Beenden");
+            Console.Write("Deine Wahl: ");
+
+            string wahl = Console.ReadLine();
+
+            if (wahl == "1")
+            {
+                Console.Write("Wie lang soll das Passwort sein? (4 bis 50): ");
+                string eingabe = Console.ReadLine();
+
+                int laenge;
+                // TryParse prueft, ob wirklich eine Zahl eingegeben wurde
+                if (int.TryParse(eingabe, out laenge) && laenge >= 4 && laenge <= 50)
+                {
+                    string passwort = PasswortErstellen(laenge);
+                    Console.WriteLine("Dein neues Passwort: " + passwort);
+                    PasswortPruefen(passwort);
+                }
+                else
+                {
+                    Console.WriteLine("Bitte eine Zahl von 4 bis 50 eingeben!");
+                }
+            }
+            else if (wahl == "2")
+            {
+                Console.Write("Gib dein Passwort ein: ");
+                string passwort = Console.ReadLine();
+                PasswortPruefen(passwort);
+            }
+            else if (wahl == "3")
+            {
+                weiter = false;
+            }
+            else
+            {
+                Console.WriteLine("Ungueltige Eingabe!");
+            }
+        }
+
+        Console.WriteLine("Tschuess!");
+    }
+
+    // ---------- Passwort erstellen ----------
+    static string PasswortErstellen(int laenge)
+    {
+        string zeichen = "abcdefghijklmnopqrstuvwxyz"
+                       + "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                       + "0123456789"
+                       + "!?@#$%&*+-";
+
+        Random zufall = new Random();
+        string passwort = "";
+
+        for (int i = 0; i < laenge; i++)
+        {
+            int position = zufall.Next(0, zeichen.Length);
+            passwort = passwort + zeichen[position];
+        }
+
+        return passwort;
+    }
+
+    // ---------- Passwort pruefen ----------
+    static void PasswortPruefen(string passwort)
+    {
+        bool hatGross = false;
+        bool hatKlein = false;
+        bool hatZahl = false;
+        bool hatSonderzeichen = false;
+
+        // Jedes Zeichen einzeln anschauen
+        foreach (char c in passwort)
+        {
+            if (char.IsUpper(c))
+            {
+                hatGross = true;
+            }
+            else if (char.IsLower(c))
+            {
+                hatKlein = true;
+            }
+            else if (char.IsDigit(c))
+            {
+                hatZahl = true;
+            }
+            else
+            {
+                hatSonderzeichen = true;
+            }
+        }
+
+        // Punkte vergeben (maximal 6)
+        int punkte = 0;
+
+        if (passwort.Length >= 8) punkte++;
+        if (passwort.Length >= 12) punkte++;
+        if (hatGross) punkte++;
+        if (hatKlein) punkte++;
+        if (hatZahl) punkte++;
+        if (hatSonderzeichen) punkte++;
+
+        // Ergebnis anzeigen
+        Console.WriteLine();
+        Console.WriteLine("--- Sicherheitspruefung ---");
+        Console.WriteLine("Punkte: " + punkte + " von 6");
+
+        if (punkte <= 2)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Sicherheit: SCHWACH");
+        }
+        else if (punkte <= 4)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Sicherheit: MITTEL");
+        }
+        else
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Sicherheit: STARK");
+        }
+        Console.ResetColor();
+
+        // Tipps, was noch fehlt
+        if (passwort.Length < 8) Console.WriteLine("Tipp: Mindestens 8 Zeichen verwenden.");
+        else if (passwort.Length < 12) Console.WriteLine("Tipp: 12 oder mehr Zeichen sind noch sicherer.");
+        if (!hatGross) Console.WriteLine("Tipp: Grossbuchstaben hinzufuegen.");
+        if (!hatKlein) Console.WriteLine("Tipp: Kleinbuchstaben hinzufuegen.");
+        if (!hatZahl) Console.WriteLine("Tipp: Zahlen hinzufuegen.");
+        if (!hatSonderzeichen) Console.WriteLine("Tipp: Sonderzeichen hinzufuegen (z.B. ! ? # %).");
+    }
+}
