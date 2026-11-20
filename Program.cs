@@ -1,0 +1,100 @@
+﻿using System;
+using System.Threading;
+
+class Program
+{
+    static void Main()
+    {
+        Random zufall = new Random();
+
+        string[] symbole = { "Kirsche", "Zitrone", "Glocke", "Stern", "7" };
+
+        int muenzen = 100;
+        int einsatz = 10;
+        int jackpot = 500;
+
+        Console.WriteLine("=================================");
+        Console.WriteLine("      CASINO SLOT MACHINE");
+        Console.WriteLine("=================================");
+        Console.WriteLine("Regeln:");
+        Console.WriteLine("  2 gleiche Symbole  = 20 Muenzen");
+        Console.WriteLine("  3 gleiche Symbole  = 100 Muenzen");
+        Console.WriteLine("  7 - 7 - 7          = JACKPOT!");
+        Console.WriteLine("Ein Dreh kostet " + einsatz + " Muenzen.");
+
+        bool weiter = true;
+
+        while (weiter)
+        {
+            Console.WriteLine();
+            Console.WriteLine("Muenzen: " + muenzen + "   |   Jackpot: " + jackpot);
+
+            if (muenzen < einsatz)
+            {
+                Console.WriteLine("Du hast nicht mehr genug Muenzen. GAME OVER!");
+                break;
+            }
+
+            Console.Write("ENTER = drehen, q = aufhoeren: ");
+            string eingabe = Console.ReadLine();
+
+            if (eingabe == "q")
+            {
+                weiter = false;
+                continue;
+            }
+
+            muenzen = muenzen - einsatz;
+            jackpot = jackpot + 5;
+
+            for (int i = 0; i < 15; i++)
+            {
+                string a = symbole[zufall.Next(0, symbole.Length)];
+                string b = symbole[zufall.Next(0, symbole.Length)];
+                string c = symbole[zufall.Next(0, symbole.Length)];
+                Console.Write("\r| " + a.PadRight(7) + " | " + b.PadRight(7) + " | " + c.PadRight(7) + " |");
+                Thread.Sleep(80);
+            }
+
+            string walze1 = symbole[zufall.Next(0, symbole.Length)];
+            string walze2 = symbole[zufall.Next(0, symbole.Length)];
+            string walze3 = symbole[zufall.Next(0, symbole.Length)];
+
+            Console.WriteLine("\r| " + walze1.PadRight(7) + " | " + walze2.PadRight(7) + " | " + walze3.PadRight(7) + " |");
+
+            if (walze1 == "7" && walze2 == "7" && walze3 == "7")
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("*** JACKPOT!!! Du gewinnst " + jackpot + " Muenzen! ***");
+                Console.ResetColor();
+                muenzen = muenzen + jackpot;
+                jackpot = 500;
+            }
+            else if (walze1 == walze2 && walze2 == walze3)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("3 gleiche! Du gewinnst 100 Muenzen!");
+                Console.ResetColor();
+                muenzen = muenzen + 100;
+            }
+            else if (walze1 == walze2 || walze2 == walze3 || walze1 == walze3)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("2 gleiche! Du gewinnst 20 Muenzen!");
+                Console.ResetColor();
+                muenzen = muenzen + 20;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Leider nichts gewonnen.");
+                Console.ResetColor();
+            }
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("Du gehst mit " + muenzen + " Muenzen nach Hause.");
+        Console.WriteLine("Danke fuers Spielen!");
+        Console.ReadKey();
+    }
+}
